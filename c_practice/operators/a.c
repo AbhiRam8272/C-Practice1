@@ -1,5 +1,6 @@
 #include<stdio.h>
+#include"binary.h"
 int main(){
-    float x=3.14;
-    printf("%b\n",x);
+    int x=5;
+    pb(x);
 }
