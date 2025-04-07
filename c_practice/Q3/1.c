@@ -1,13 +1,19 @@
-//CProgram to count digits in a number.
 #include<stdio.h>
-int main(){
-    int a,b=0;
-    printf("Enter the number: ");
-    scanf("%d",&a);
-    for(int i=0;a!=0;i++){
-        a/=10;
-        b++;
-    }
-    printf("The integer has %d digits",b);
-    return 0;
+int main()
+{
+long long int i;
+
+	int count=0;
+printf("enter the number\n");
+scanf("%lld",&i);
+if(i==0)
+{
+printf("the no of digits in the number is 1");
+}
+else {
+while(i>0){
+	i=i/10;
+	count++;
+}printf("no of digits in the number is%d\n",count);}
+
 }

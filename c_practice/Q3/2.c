@@ -1,14 +1,18 @@
-// CProgram to calculate SUM & PRODUCT of all digits
 #include<stdio.h>
 int main(){
-    int a,sum=0,pro=1;
-    printf("Enter the number: \n");
-    scanf("%d",&a);
-    for(int i=0;a!=0;i++){
-        sum+=a%10;
-        pro*=a%10;
-        a/=10;
-    }
-    printf("The sum of digits is %d\n",sum);
-    printf("The product of digits is %d\n",pro);
+	int n,t,sum,product;
+	printf("enter the number\n");
+	scanf("%d",&n);
+	t=0;
+	sum=0;
+	product=1;
+	while(n>0)
+{
+t=n%10;
+sum=sum+t;
+product=product*t;
+n=n/10;
+
 }
+
+printf("sum is %d and product is %d\n",sum,product);}

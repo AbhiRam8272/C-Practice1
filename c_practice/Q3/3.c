@@ -1,14 +1,15 @@
-// CProgram to reverse a number (for example input: 1234, output: 4321).
 #include<stdio.h>
-int main(){
-    int a,b,c=0;
-    printf("Enter the number: ");
-    scanf("%d",&a);
-    for(int i=0;a!=0;i++){
-        b=a%10;
-        c=c*10+b;
-        a/=10;
-    }
-    printf("The reversed integer is %d\n",c);
-    return 0;
+int main()
+{
+	int n,d,r;
+	r=0;
+printf("enter the number to reverse\n");
+scanf("%d",&n);
+while(n>0)
+{
+d=n%10;
+r=(r*10)+d;
+n=n/10;
+}
+printf("number after reversing is %d\n",r);
 }
