@@ -1,12 +1,16 @@
 //String Length Using Pointer
 #include<stdio.h>
+#include<string.h>
 int main(){
-    char a[30];
-    int b=0;
+    char name[50];
+    char *p;
+    int a,cnt=0;
     printf("Enter a string:");
-    fgets(a,30,stdin);
-    for(int i=0;*(a+i)!='\0';i++){
-       b++;
+    fgets(name,50,stdin);
+    p=name;
+    for(int i=0;*(p+i)!='\0';i++){
+        cnt++;
     }
-    printf("%d",b-1);
+    printf("Length of string is %d\n",cnt-1);
+    printf("Length of string is %ld\n",strlen(name)-1);    
 }
