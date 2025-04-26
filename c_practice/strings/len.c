@@ -5,10 +5,11 @@ int main(){
     int i=0,cnt=0;
     printf("enter the string:\n");
     fgets(a,sizeof a,stdin);
+    a[strcspn(a,"\n")]='\0';
     while(a[i]!='\0'){
         cnt++;
         i++;
     }
     printf("%d",cnt);
-    printf("\n%ld",strlen(a));
+    printf("\n%ld\n",strlen(a));
 }

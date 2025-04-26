@@ -9,7 +9,7 @@ int main(){
     fgets(b,sizeof b,stdin);
     c=strlen(a)-1;
     d=strlen(b)-1;
-   // printf("%d %d\n",c,d);
+ printf("%d %d\n",c,d);
     if(c==d){
         for(int i=0;i<c;i++){
             if(a[i]==b[i]){
