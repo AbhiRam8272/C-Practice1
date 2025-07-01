@@ -1,0 +1,71 @@
+// Insert at beginning
+void insertAtBeginning(struct Node** headRef, struct Node** tailRef, int data) {
+    struct Node* newNode = createNode(data);
+    newNode->next = *headRef;
+    *headRef = newNode;
+
+    // Update tail if list was empty
+    if (*tailRef == NULL) {
+        *tailRef = newNode;
+    }
+}
+
+// Insert at end
+void insertAtEnd(struct Node** headRef, struct Node** tailRef, int data) {
+    struct Node* newNode = createNode(data);
+    if (*headRef == NULL) {
+        *headRef = *tailRef = newNode;
+    } else {
+        (*tailRef)->next = newNode;
+        *tailRef = newNode;
+    }
+}
+
+// Delete a node by value
+void deleteNode(struct Node** headRef, struct Node** tailRef, int key) {
+    struct Node* temp = *headRef;
+    struct Node* prev = NULL;
+
+    while (temp != NULL && temp->data != key) {
+        prev = temp;
+        temp = temp->next;
+    }
+
+    if (temp == NULL) {
+        printf("Node with value %d not found.\n", key);
+        return;
+    }
+
+    // Node to delete is head
+    if (prev == NULL) {
+        *headRef = temp->next;
+    } else {
+        prev->next = temp->next;
+    }
+
+    // Update tail if deleting last node
+    if (temp == *tailRef) {
+        *tailRef = prev;
+    }
+
+    free(temp);
+}
+
+// Print the list
+void printList(struct Node* head) {
+    while (head != NULL) {
+        printf("%d -> ", head->data);
+        head = head->next;
+    }
+    printf("NULL\n");
+}
+
+// Free the list
+void freeList(struct Node* head) {
+    struct Node* temp;
+    while (head != NULL) {
+        temp = head;
+        head = head->next;
+        free(temp);
+    }
+}
