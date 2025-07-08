@@ -14,7 +14,7 @@ node* createnode(int data){
 }
 
 void deletenode(node** headref,node** tailref,int key){
-	node* temp=head;
+	node* temp=*headref;
 	node* prev=NULL;
 
 	while(temp!=NULL && temp->data!=key){
@@ -26,8 +26,8 @@ void deletenode(node** headref,node** tailref,int key){
 		*headref=temp->next;
 		free(temp);
 	}
-	else if(*temp==temp){
-		*tail=prev;
+	else if(*tailref==temp){
+		*tailref=prev;
 		free(temp);
 	}
 	else{
@@ -37,7 +37,8 @@ void deletenode(node** headref,node** tailref,int key){
 }
 
 void displaylist(node* head){
-	node*temp=head;
+	node* temp =NULL;
+	temp=head;
 	while(temp!=NULL){
 		printf("%d->",temp->data);
 		temp=temp->next;
@@ -46,6 +47,7 @@ void displaylist(node* head){
 }
 
 void freelist(node* head){
+	node* temp=NULL;
 	while(head!=NULL){
 		temp=head;
 		head=head->next;
@@ -64,18 +66,18 @@ int main(){
 		printf("enter the data in node%d:",i+1);
 		scanf("%d",&data);
 		node=createnode(data);
-		if(headref==NULL){
-			headref=tailref=node;
+		if(head==NULL){
+			head=tail=node;
 		}
 		else{
-			tailref->next=node;
-			tailref=node;
+			tail->next=node;
+			tail=node;
 		}
 	}
 	displaylist(head);
 	printf("enter the data you want to delete:");
 	scanf("%d",&data);
-	deletenode(head,tail,data);
+	deletenode(&head,&tail,data);
 	displaylist(head);
 	return 0;
 }
