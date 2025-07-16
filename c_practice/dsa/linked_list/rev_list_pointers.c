@@ -2,6 +2,24 @@
 #include<stdlib.h>
 #include"link_func.h"
 
+void revlist(struct Node** headref, struct Node** tailref) {
+    struct Node* prev = NULL;
+    struct Node* curr = *headref;
+    struct Node* next = NULL;
+
+    *tailref = *headref; // Tail becomes the old head
+
+    while (curr != NULL) {
+        next = curr->next;
+        curr->next = prev;
+
+        prev = curr;
+        curr = next;
+    }
+
+    *headref = prev; // New head
+}
+
 int main(){
 	struct Node* head=NULL;
 	struct Node* tail=NULL;
@@ -22,8 +40,7 @@ int main(){
                 }
         }
         printlist(head);
-	struct Node* mid=midnode(&head);
-	printf("The middle node of the list is %d.\n",mid->data);
+	revlist(&head,&tail);
+	printlist(head);
 	return 0;
 }
-

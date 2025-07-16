@@ -31,7 +31,7 @@ void insertend(struct Node** headref,struct Node** tailref,int data){
 }
 void freelist(struct Node* head){
         struct Node* temp;
-        while(head!=NULL){
+        while(temp!=NULL){
                 temp=head;
                 head=head->next;
                 free(temp);
@@ -70,18 +70,18 @@ void deletenode(struct Node** headref,struct Node** tailref,int key){
         }
 }
 
-void dispmidnode(struct Node** headref){
+struct Node* midnode(struct Node** headref){
         struct Node* slow=NULL;
         struct Node* fast=NULL;
 
         fast=slow=*headref;
         if(*headref==NULL){
                 printf("List is Empty\n");
-                return;
+                return NULL;
         }
 	else if ((*headref)->next != NULL && (*headref)->next->next == NULL) {
 		printf("The list contains 2 elements only.Can't have a middle node.\n");
-		return;
+		return NULL;
 	}
 
         while(fast!=NULL && (fast->next)!=NULL){
@@ -89,8 +89,18 @@ void dispmidnode(struct Node** headref){
                 fast=fast->next->next;
         }
 	
-	printf("The middle node the list is %d\n",slow->data);
+	//printf("The middle node the list is %d\n",slow->data);
         
-        return;
+        return slow;
+}
+
+int delmidnode(struct Node** headref,struct Node** tailref){
+        struct Node* delnode=midnode(headref);
+	if(delnode==NULL){
+		printf("The list is either empty or only contains 2 nodes(middle can't deleted)\n");
+		return 0;
+	}
+        deletenode(headref,tailref,delnode->data);
+	return 1;
 }
 

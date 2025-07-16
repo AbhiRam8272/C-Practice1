@@ -11,8 +11,8 @@ void insertend(struct Node** headref,struct Node** tailref,int data);
 void freelist(struct Node* head);
 void printlist(struct Node* head);
 void deletenode(struct Node** headref,struct Node** tailref,int key);
-void dispmidnode(struct Node** headref);
-
+struct Node* midnode(struct Node** headref);
+int delmidnode(struct Node** headref,struct Node** tailref);
 
 
 
