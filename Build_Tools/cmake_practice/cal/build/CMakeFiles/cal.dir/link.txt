@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/cal.dir/src/add.c.o CMakeFiles/cal.dir/src/sub.c.o CMakeFiles/cal.dir/src/mul.c.o CMakeFiles/cal.dir/src/prime.c.o CMakeFiles/cal.dir/src/fibonacci.c.o CMakeFiles/cal.dir/src/div.c.o CMakeFiles/cal.dir/src/odd_even.c.o CMakeFiles/cal.dir/test/calculator.c.o -o cal 

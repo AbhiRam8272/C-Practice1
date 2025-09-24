@@ -1,0 +1,4 @@
+libcal_a-prime.o: ../../src/prime.c /usr/include/stdc-predef.h \
+ ../../include/calculator.h
+/usr/include/stdc-predef.h:
+../../include/calculator.h:
