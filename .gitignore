@@ -1,0 +1,38 @@
+# C binaries
+*.out
+*.o
+*.a
+*.so
+*.elf
+*.bin
+*.exe
+
+# CMake build directories
+build/
+*/build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Directories inside your tree that should never be tracked
+Build_Tools/**/build/
+c_practice/**/build/
+c_practice/**/a.out
+*/a.out
+
+# Temporary, generated, or testing files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# VSCode specific
+.vscode/
+.history/
+
+# Yocto
+tmp/
+sstate-cache/
+build/
+conf/
