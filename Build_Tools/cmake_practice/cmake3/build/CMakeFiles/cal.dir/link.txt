@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/cal.dir/src/add.c.o CMakeFiles/cal.dir/src/sub.c.o CMakeFiles/cal.dir/src/mul.c.o CMakeFiles/cal.dir/test/app.c.o -o cal 

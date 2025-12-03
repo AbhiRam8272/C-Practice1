@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/cal.dir/func/add.c.o CMakeFiles/cal.dir/func/sub.c.o CMakeFiles/cal.dir/func/mul.c.o CMakeFiles/cal.dir/func/div.c.o CMakeFiles/cal.dir/calculator.c.o -o cal 

@@ -1,4 +1,0 @@
-libcal_a-div.o: ../../src/div.c /usr/include/stdc-predef.h \
- ../../include/calculator.h
-/usr/include/stdc-predef.h:
-../../include/calculator.h:

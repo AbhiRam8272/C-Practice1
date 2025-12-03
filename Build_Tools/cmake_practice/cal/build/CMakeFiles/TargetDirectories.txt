@@ -1,3 +1,0 @@
-/home/abyys/C-Practice1/c_practice/cmake_practice/cal/build/CMakeFiles/cal.dir
-/home/abyys/C-Practice1/c_practice/cmake_practice/cal/build/CMakeFiles/edit_cache.dir
-/home/abyys/C-Practice1/c_practice/cmake_practice/cal/build/CMakeFiles/rebuild_cache.dir
