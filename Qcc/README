@@ -1,0 +1,8 @@
+27/01/26
+1. Went through the documents of qcc74x
+
+2. Implemented gpio with external led (led blinking code)
+
+3. Studied the datasheet of rtc i2c module 
+
+4. Studied the i2c example code of qcc744m evk 
