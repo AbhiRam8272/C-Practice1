@@ -1,8 +1,21 @@
 27/01/26
-1. Went through the documents of qcc74x
+1. Went through the documents of qcc74x.
 
-2. Implemented gpio with external led (led blinking code)
+2. Implemented gpio with external led (led blinking code).
 
-3. Studied the datasheet of rtc i2c module 
+3. Studied the datasheet of rtc i2c module.
 
-4. Studied the i2c example code of qcc744m evk 
+4. Studied the i2c example code of qcc744m evk.
+
+
+28/01/26
+
+1.Interafaced rtc using i2c.
+
+29/01/26
+
+1. Interfaced i2c 16x2 lcd module and displayed rtc using i2c.
+
+2.Studied the working of spi protocol on qcc744m evk.
+
+3.Tried to implement spi communication between 2 qcc boards but failed. 
