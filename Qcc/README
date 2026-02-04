@@ -18,4 +18,22 @@
 
 2.Studied the working of spi protocol on qcc744m evk.
 
-3.Tried to implement spi communication between 2 qcc boards but failed. 
+3.Tried to implement spi communication between 2 qcc boards but failed.
+
+2/01/26
+
+1. Interfaced dht11 
+
+2. Interfaced MQ135
+
+3. Interfaced 1.3" OLED 
+
+3/002/26
+
+1. Interfaced dht11,MQ135,RTC all together and display on OLED
+
+2. Established SPI connection with 2 QCC boards 
+
+4/02/26
+
+1. Sent sensor data from one Board to other board using spi. 
